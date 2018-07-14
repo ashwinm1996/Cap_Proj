@@ -13,5 +13,17 @@ namespace admin
         {
 
         }
+        public bool Logout
+        {
+            get { return divLogout.Visible; }
+            set { divLogout.Visible = value; }
+        }
+
+        protected void lbtnLogout_Click1(object sender, EventArgs e)
+        {
+            Session["user"] = null;
+            Response.Redirect("Home.aspx");
+
+        }
     }
 }
